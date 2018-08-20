@@ -1,0 +1,114 @@
+import React, {Component} from 'react';
+import { StyleSheet, Text, View, Button} from 'react-native';
+
+
+export default class App extends Component {
+  constructor(){
+
+  super()
+  this.state={}/// why???
+  }
+
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.result}>
+          <Text style={styles.calculationText}>11*11</Text>
+        </View>
+
+        <View style={styles.calculations}>
+          <Text style={styles.resultText}>121</Text>
+        </View>
+        <View style={styles.buttons}>
+          <View style={styles.numbers}>
+            <View style={styles.row}>
+              <Button title="0" />
+              <Button title="0" />
+              <Button title="0" />
+
+            </View>
+            <View style={styles.row}>
+              <Button title="0" />
+              <Button title="0" />
+              <Button title="0" />
+            </View>
+            <View style={styles.row}>
+              <Button title="0" />
+              <Button title="0" />
+              <Button title="0" />
+            </View>
+            <View style={styles.row}>
+              <Button title="0" />
+              <Button title="0" />
+              <Button title="0" />
+            </View>
+            </View>
+          <View style={styles.operations}>
+            <Button title="+"/>
+            <Button title="+"/>
+            <Button title="+"/>
+            <Button title="+"/>
+
+          </View>
+          </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+
+  resultText:{
+      fontSize:30,
+      color:'white'
+  },
+  calculationText:{
+      fontSize:25,
+      color:'white'
+  },
+
+
+
+   result: {
+     flex:2,
+     backgroundColor: 'red',
+     justifyContent:'center',
+     alignItems:'flex-end'
+
+  },
+
+  row:{
+    flexDirection: 'row',
+    flex:1,
+    justifyContent:'space-around',
+    alignItems: 'center'
+  },
+  calculations: {
+    flex:1,
+    backgroundColor: 'green',
+
+  },
+  buttons: {
+    flex:7,
+    flexDirection:'row'
+  },
+
+  numbers: {
+    flex:3,
+    backgroundColor:'yellow'
+
+  },
+  operations: {
+    flex:1,
+    backgroundColor: 'black',
+    justifyContent:'space-around',
+    alignItems:'stretch'
+
+  },
+});
+
+// AppRegistry.registerComponent('AwesomeProject', () => App);
